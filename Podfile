@@ -9,7 +9,7 @@ target 'AlfaNews' do
   pod 'Alamofire', '5.7.1'
   pod 'Kingfisher', '7.9.1'
   pod 'FittedSheets', '2.5.3'
-  pod  'RxSwift', '6.5.0'
+  pod 'RxSwift', '6.5.0'
   pod 'NVActivityIndicatorView', '5.1.1'
   pod 'SkeletonView', '1.30.4'
 

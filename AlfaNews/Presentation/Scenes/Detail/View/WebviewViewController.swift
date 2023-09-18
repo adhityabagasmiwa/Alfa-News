@@ -11,8 +11,8 @@ import WebKit
 class WebviewViewController: UIViewController {
 
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var webView: WKWebView!
-    
+    var webView: WKWebView!
+
     private let url: URL
     
     init(url: URL) {
@@ -25,16 +25,22 @@ class WebviewViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        let configuration = WKWebViewConfiguration()
+        configuration.mediaTypesRequiringUserActionForPlayback = .all
+        configuration.allowsInlineMediaPlayback = false
+        configuration.allowsAirPlayForMediaPlayback = false
+        configuration.allowsPictureInPictureMediaPlayback = true
+        configuration.upgradeKnownHostsToHTTPS = true
+        
+        webView = WKWebView(frame: mainView.bounds, configuration: configuration)
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true
-        webView.configuration.mediaTypesRequiringUserActionForPlayback = .all
-        webView.configuration.allowsInlineMediaPlayback = false
-        webView.configuration.upgradeKnownHostsToHTTPS = true
         
-        mainView = webView
+        mainView.addSubview(webView)
+        
         webView.load(URLRequest(url: url))
     }
     

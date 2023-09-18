@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.7.1)
+  - FittedSheets (2.5.3)
+  - Kingfisher (7.9.1)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - RxSwift (6.5.0)
+  - SkeletonView (1.30.4)
+
+DEPENDENCIES:
+  - Alamofire (= 5.7.1)
+  - FittedSheets (= 2.5.3)
+  - Kingfisher (= 7.9.1)
+  - NVActivityIndicatorView (= 5.1.1)
+  - RxSwift (= 6.5.0)
+  - SkeletonView (= 1.30.4)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FittedSheets
+    - Kingfisher
+    - NVActivityIndicatorView
+    - RxSwift
+    - SkeletonView
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
+  Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+
+PODFILE CHECKSUM: c9369002dcd6577211194dd40e055f76307b28fa
+
+COCOAPODS: 1.11.3

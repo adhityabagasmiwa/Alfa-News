@@ -27,7 +27,7 @@ class HomeNewsSourceViewController: UIViewController, CollectionViewConfigurable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchData(category: .business)
+        fetchData(category: viewModel.selectedNewsCategory.title)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -79,7 +79,7 @@ extension HomeNewsSourceViewController: HomeNewsSourceProtocolDelegate {
     }
     
     func onErrorGetNewsSources(error: CustomError) {
-        
+        showAlertDialog(message: error.message)
     }
 }
 

@@ -82,7 +82,7 @@ extension ArticlesViewController: ArticleProtocolDelegate {
     }
     
     func onErrorGetArticles(error: CustomError) {
-        
+        showAlertDialog(message: error.message)
     }
 }
 

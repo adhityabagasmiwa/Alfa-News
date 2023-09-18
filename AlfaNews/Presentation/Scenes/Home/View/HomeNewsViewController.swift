@@ -32,7 +32,7 @@ class HomeNewsViewController: UIViewController, CollectionViewConfigurable, Tabl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchData(.business)
+        fetchData(viewModel.selectedNewsCategory.title)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -121,7 +121,7 @@ extension HomeNewsViewController: HomeNewsProtocolDelegate {
     }
     
     func onErrorGetNews(error: CustomError) {
-        
+        showAlertDialog(message: error.message)
     }
 }
 
